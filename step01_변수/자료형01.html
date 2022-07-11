@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료형 01</title>
+</head>
+
+<body>
+    <div id="box">
+        나는 박스
+    </div>
+    <script>
+        let a = 1;
+        let b = '1';
+        let c = 'true';
+        let d = true;
+        let e;
+        let f = null;
+
+        // 1 '1' 'true' true undefined null
+        console.log(
+            a, b, c, d, e, f
+        );
+
+        // 각 변수들의 자료형을 찍어봤다.
+        // 숫자(num), 문자(str), 참거짓(boolean), undefined, 객체 (null)
+        console.log(
+            typeof (a),
+            typeof (b),
+            typeof (c),
+            typeof (d),
+            typeof (e),
+            typeof (f), // null은 객체다. object
+        );
+
+        let _this = this;
+        console.log(this);
+        console.log(_this, typeof (_this));
+        console.log(_this, typeof (_this), _this.document);
+        // typeof _this : window는 객체 / ~_this.document : 그 안의 구성요소(property)는 document(html)도 객체 -- 객체지향
+
+        let TA = 0;
+        let TB = '';
+        let TC = false;
+        let TD = !false;
+        let TE = null;
+        let TF = undefined;
+
+        // 참스러운 값과 거짓스러운 값
+
+        console.log(
+            Boolean(TA),
+            Boolean(TB), // ''안의 숫자는 문자, 공백도 true
+            Boolean(TC),
+            Boolean(TD), //true
+            Boolean(TE),
+            Boolean(TF),
+        )
+
+    </script>
+</body>
+
+</html>

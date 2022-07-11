@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 실습 01</title>
+</head>
+
+<body>
+
+    <div id="box">나는 박스 친구가 없네</div>
+    <div id="box2">나는 박스 친구가 없네</div>
+    <div div id="box3" onclick='글자바꾸기2()'> 나는 박스 친구가 없네</div>
+
+    <script> // 함수 > 함수표현식 > 리엑트에서의 방식
+        // 이렇게 담아서 사용할 수 있다.
+        const BOX = document.getElementById('box') //document.쩜 > 도큐먼트 아래에 아이디 박스 : 메소드
+        const BOX2 = document.getElementById('box2')
+        const BOX3 = document.getElementById('box3')
+
+        console.log(BOX, typeof (BOX)); // box는 객체(object)
+        const 글자바꾸기 = function () { // 함수도 담을 수 있다.
+            this.innerText = '나는 친구가 많아!'
+        }
+
+        // function 글자바꾸기2() { this.innerText = '나는 너네보다 훨~~씬 친구가 많아!' }
+
+        function 글자바꾸기2() {
+            BOX3.innerText = '나는 너네보다 훨~~씬 친구가 많아!'
+        }
+
+        //함수 선언
+        BOX.addEventListener('click', 글자바꾸기)
+        // ((1번째 파라미터) 매게변수로 EVENT('click')를 가져온다, (2번째 파라미터) 함수)
+
+        // 함수 표현식 (함수가 선언이 되어있어야 쓸 수 있다.)
+        BOX2.onclick = function () {
+            this.innerText = '나는 너보다 친구가 더 많아!'
+        }
+    </script>
+
+
+</body>
+
+</html>
