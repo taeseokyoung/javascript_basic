@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>돌아가는 이미지</title>
+    <style>
+        .ddd {
+            height: 300vh;
+        }
+
+        .box {
+            position: fixed;
+            inset: 50% auto auto 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .box .detail {
+            width: 400px;
+            height: 400px;
+            background: #ff0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="ddd">
+        <div class="box">
+            <div class="detail">
+
+            </div>
+        </div>
+    </section>
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        const DDD = document.querySelector('.box .detail')
+        window.addEventListener('scroll', function () {
+            let sct = window.scrollY;
+            console.log(sct, DDD)
+            // DDD.style.backgroundColor = '#f00'
+            // DDD.style.transform = 'rotate(45deg)'
+            DDD.style.transform = 'rotate(' + sct / 2 + 'deg)'
+        })
+
+        // function 회전문자(word) {
+        //     const words = [...word];
+        //     words.map(el => '<span>' + el);
+        // }
+        // 회전문자('MYNAMEISKYOUNG')
+
+
+        function 회전문자(word) {
+            const words = [...word];
+            const wwords = words.map(el => '<span>' + el);
+            console.log(words);
+        }
+        회전문자('MYNAMEISKYOUNG')
+    </script>
+</body>
+
+</html>
