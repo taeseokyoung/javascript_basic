@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자 03 - 논리연산자</title>
+</head>
+
+<body>
+    <script>
+        let 참 = true;
+        let 거짓 = false;
+        const a = '떠경'
+
+        console.log(참, 거짓);
+        console.log(!참, !거짓); // not 부정연산자
+        console.log(참 && 거짓, 참 && 참, 거짓 && 참) // and 연산자 (두가지 조건이 만족할 때만 참)
+        console.log(거짓 || 참, 거짓 || 거짓) // or 연산자 (둘 중 하나가 참이라도 참으로 판별)
+
+        a ? console.log(a + ' 진심') : console.log('거짓말')
+        a ? console.log(a + '진심') : console.log('거짓말') //if else 둘 다 붙어서 나와야한다.
+        a && console.log(a + '진심');
+        // = if (!a) { console.log(a + ' 진심') }
+
+        if (a) {
+            console.log(a + ' 진심')
+        } else {
+            console.log(a + '거짓말')
+        }
+
+        if (!a) {
+            console.log(a + ' 진심')
+        } else {
+            console.log(a + ' 거짓말')
+        }
+
+        a || console.log('이름없음'); // 참이니까 표기가 안됨?
+        !a || console.log('이름없음'); // 참이 아니기 때문에 콘솔에 찍힘
+
+        // const Test = () => {
+        //     return {
+        //         //{ a && <h1>gggg</h1> }
+        //         a?<h2>반가워</h2> : <h2>돌아가</h2>
+        //      }
+        // }
+    </script>
+</body>
+
+</html>

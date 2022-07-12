@@ -27,6 +27,7 @@
 
         // 각 변수들의 자료형을 찍어봤다.
         // 숫자(num), 문자(str), 참거짓(boolean), undefined, 객체 (null)
+
         console.log(
             typeof (a),
             typeof (b),
@@ -41,7 +42,7 @@
         console.log(_this, typeof (_this));
         console.log(_this, typeof (_this), _this.document);
         // typeof _this : window는 객체 / ~_this.document : 그 안의 구성요소(property)는 document(html)도 객체 -- 객체지향
-
+        // this 1.window 2.객체 
         let TA = 0;
         let TB = '';
         let TC = false;
@@ -58,7 +59,25 @@
             Boolean(TD), //true
             Boolean(TE),
             Boolean(TF),
-        )
+        );
+
+        const 객체 = {
+            name: '떠경',
+            age: 31,
+            Work: function () {
+                console.log('코딩공부')
+            }
+        }
+
+        console.log(객체.name, 객체['name']);
+        const 배열 = [1, 2, 3, 4, 5];
+        console.log(배열[0]);
+
+        const 함수 = function () {
+            return '나는 함수';
+        }
+
+        console.log(함수())
 
     </script>
 </body>

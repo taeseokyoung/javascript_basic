@@ -32,8 +32,9 @@
         }
 
         //함수 선언
-        BOX.addEventListener('click', 글자바꾸기)
-        // ((1번째 파라미터) 매게변수로 EVENT('click')를 가져온다, (2번째 파라미터) 함수)
+        BOX.addEventListener('click', 글자바꾸기);
+        // BOX.addEventListener({'click', mouseenter},<< 이부분 이벤트 여러개 등록하는거 알아보기!
+        // ((1번째 파라미터) 매게변수로 EVENT('clic')를 가져온다, (2번째 파라미터) 함수)
 
         // 함수 표현식 (함수가 선언이 되어있어야 쓸 수 있다.)
         BOX2.onclick = function () {
