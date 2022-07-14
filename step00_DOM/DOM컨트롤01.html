@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 01 - DOM CONTROL 01</title>
+    <style>
+        * {
+            color: #444444;
+            text-decoration: none;
+        }
+
+        .gnb>ul>li.on a {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="gnb">
+        <ul>
+            <li class="on"><a href="">menu01</a></li>
+            <li><a href="">menu02</a></li>
+            <li><a href="">menu03</a></li>
+            <li><a href="">menu04</a></li>
+            <li><a href="">menu05</a></li>
+        </ul>
+    </nav>
+    <section class="sum">
+        <ul>
+            <li>mmenu01</li>
+            <li>mmenu02</li>
+            <li>mmenu03</li>
+            <li>mmenu04</li>
+        </ul>
+    </section>
+    <!-- div*4>{content0$}> -->
+    <div class="content">
+        <div>content01</div>
+        <div>content02</div>
+        <div>content03</div>
+        <div>content04</div>
+    </div>
+
+
+
+    <script>
+        // $(function(){}) 윈도우, 돔이 로드 되었을 때
+        window.addEventListener('DOMContentLoaded', () => {
+            const UL = document.querySelector('.gnb>ul')
+            const LI = document.querySelectorAll('.gnb>ul>li')
+
+            //리스트를 얻는 방법이 여러가지가 있다.
+
+            // console.log(UL, UL.children, LI)
+
+            // console.log([UL.children])
+            // UL.children 자체가 배열에서 1개로 인식되었다.
+
+            // console.log([...UL.children])
+            // ... 스프레드연산자(값) 내용을 늘여놓는다.(ecma6)
+
+            // htmlcollection을[]에 넣어서 ...사용해서 배열로 만들어줄 수 있다. 데이터를 쓸 때 원본을 바꾸지 않고 카피본을 만들어서 쓴다. 지금 ul.childen을 [...ul.children] 으로 넣은 것 처럼 
+
+            LI.forEach(function (el, idx) {
+                el.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    LI.forEach(function (el) {
+                        el.classList.remove('on')
+                    })
+                    el.classList.add('on');
+                    console.log(event.target, event.currentTarget, this)
+                    // 내가 클릭하는 자체(가장 아래) a, el, el
+                    // 화살표함수 쓰니까 this 바뀌었다. 화살표 함수는 this 없다.(event) => 
+                })
+                // function과 화살표함수
+                // function(){} = 상황에 따라 this를 포함한다.
+                // () => {} = this가 없다. window를 가리킨다.
+                // e => console.log(e) , (console.log(e), )
+            });
+
+            const TUL = document.querySelector('.sum ul');
+            const TLI = document.querySelectorAll('.sum ul li');
+            const TCONTENT = document.querySelectorAll('.content>div')
+
+            TLI.forEach((elm, idx) => {
+                elm.addEventListener('click', () => {
+                    TLI.forEach(el => el.classList.remove('on'))
+                    elm.classList.add('on');
+                    TCONTENT.forEach(el => el.classList.remove('on'))
+                    TCONTENT[idx].classList.add('on');
+                })
+
+            })
+
+
+        });
+
+    </script>
+</body>
+
+</html>
