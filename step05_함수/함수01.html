@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 01</title>
+</head>
+
+<body>
+    <!-- 2022.07.08 앞으로 많이 보게 될 태그, react <app /> -->
+    <div id="App"></div>
+    <script>
+        // 함수 = 같은일을 되풀이하는 것들을 묶어서 하나의 식으로 만들어준다. (재활용 하기 위해서)
+
+        이름('태서경', '잔다.');
+
+        function 이름(a, b) {
+            console.log(a, b)
+        }
+
+        //함수표현식: 변수에 담긴 함수는 호이스팅 되지 않는다. (실행식을 꼭 아래에 붙여줘야한다.)
+        const 이름2 = function () {
+            console.log('나함수')
+
+        }
+
+        이름2();
+
+
+        // 화살표 함수 표현식: arrow function
+        // const 이름3 = () => {
+        //     console.log('나 화살표 함수')
+        // }
+
+        const 이름3 = (a, b) => console.log(a, b);
+        //매게변수a 하나일 때 ()생략
+        const 이름3 = a => console.log(a);
+        // 식 1줄일 때 {} 생략 
+        const 이름3 = a => { console.log(a); console.log(a) }
+        // 2줄 이상일 때는 {식; 식;} 또는 (식, 식)
+
+        이름3('나 화살표 함수', '아이고');
+
+
+    </script>
+</body>
+
+</html>

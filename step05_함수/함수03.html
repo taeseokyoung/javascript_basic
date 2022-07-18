@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 03</title>
+</head>
+
+<body>
+    <div id="App">
+        <span>나는 누구? 여긴 어디?</span>
+        <a href="#">변신!!</a>
+    </div>
+    <ul id="UL">
+        <li>menu01</li>
+        <li>menu02</li>
+        <li>menu03</li>
+    </ul>
+
+    <!-- <button id="btn">CLICK ME!</button> -->
+    <script>
+
+        //화살표 함수에서의 this
+        const App = document.querySelector('#App');
+        const UL = document.querySelector('#UL');
+
+        // function 이름() {
+        //     console.log('seokyoung')
+        // }
+
+        // $('#App').on('click', function () {
+        //     $(this).addClass('on');
+        // })
+
+        //App = this (내가 클릭한 그것), 화살표함수에는 this 없다.
+        App.addEventListener('click', (event) => {
+            // console.log(event)
+            // currentTarget: null
+            console.log(event.target, event.currentTarget);
+
+
+            // this.style.color = "#f00";
+
+        });
+
+        UL.addEventListener('click', e => {
+            // 이벤트 위임. 이 이벤트를 받는 것 -> UL.
+            let TG = e.target;
+
+            // 먼저 순회하여 색상을 전부 빼주고, target만 색상이 변하도록 했다. 스프레드 연산자.
+            const AllLI = [...UL.children];
+            console.log(AllLI)
+            AllLI.forEach(e => e.style.color = '')
+            TG.style.color = "#f00"
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>
