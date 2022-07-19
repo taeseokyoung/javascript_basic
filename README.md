@@ -112,3 +112,12 @@ color: "이뻐"
 리엑트  
 const pata = [ { id:  }, {  }, {  } ]  
 CRUD  
+  
+22.07.18  
+티스토리에 정리  
+https://tae-seokyoung.tistory.com/54?category=1012689
+  
+22.07.19  
+티스토리에 정리  
+
+ 

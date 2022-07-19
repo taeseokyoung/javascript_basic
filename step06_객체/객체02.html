@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 02 - 개발자객체</title>
+</head>
+
+<body>
+    <script>
+        // 1. 스프레드 연산자는 그냥 늘어놓는 것이다.
+        const 동물 = {
+            leg: 4,
+            type: 'amimal',
+            mouse: 1,
+        }
+
+        const 고양이 = {
+            ...동물,
+            sound: '애용'
+        }
+
+
+        const 강아지 = {
+            ...동물,
+            sound: '멍멍'
+        }
+
+        const 앵무새 = {
+            ...동물,
+            sound: '안녕'
+        }
+
+        console.log(고양이, 강아지, 앵무새);
+
+    </script>
+</body>
+
+</html>
