@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 02</title>
+</head>
+
+<body>
+    <h1>배열을 공부합니다. 02. - 배열</h1>
+    <ul id="UL"></ul>
+    <script>
+        // 1. 배열을 돌아서(순회) 배열 각각을 표현 - 일반 for.
+        const 숫자배열 = ['하나', '둘', '셋', '넷', '다섯'];
+        console.log(숫자배열.length);
+
+        // 초기값, 비교값, 증가값
+
+        for (i = 0; i < 숫자배열.length; i++) {
+            // console.log(i);
+            console.log(숫자배열[i]);
+        }
+
+        for (i = 숫자배열.length - 1; i >= 0; i--) {
+            // console.log(i);
+            console.log(숫자배열[i]);
+        }
+
+        // for ... in문. 인덱스번호(index key)를 반환.
+
+        for (i in 숫자배열) {
+            console.log(i);
+        } // 0 1 2 3 4
+
+        // for ... of문. 배열 자체(value)를 반환.
+
+        for (i of 숫자배열) {
+            // console.log(숫자배열[i]);
+            console.log(i);
+        } // 1 2 3 4 5
+
+
+        // for문을 이용해서 html을 생성해봤다.
+
+        for (i of 숫자배열) {
+            UL.innerHTML += '<li>' + i + '</li>';
+        } 
+    </script>
+</body>
+
+</html>

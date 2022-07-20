@@ -113,11 +113,33 @@ color: "이뻐"
 const pata = [ { id:  }, {  }, {  } ]  
 CRUD  
   
-22.07.18  
+22.07.18 - step05_함수
 티스토리에 정리  
 https://tae-seokyoung.tistory.com/54?category=1012689
   
-22.07.19  
+22.07.19 - step06_객체
 티스토리에 정리  
+https://tae-seokyoung.tistory.com/55
+
+22.07.19 - 배열
+
+선언  
+const 배열 = new array();  
+배열[0] = "값";  
+
+리터럴(표현식) **요즘 사용하는 방법  
+const 배열 = [ '값; 1;']  
+
+key값이 정해져서 index로 들어갔다.  
+객체를 배열로 가져올 수 있다  
+객체.name 객체[name] --> 배열[0]       0: (index number)  
+  
+* 배열을 배우는 이유 : 
+배열 1줄로 html을 표현할 수 있다.  
+회원data값 [id, pw]   
+id === id  
+pw === pw --> 로그인!  
+
+
 
  
