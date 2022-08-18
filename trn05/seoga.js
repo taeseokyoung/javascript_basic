@@ -4,6 +4,7 @@ $(function () {
     $('.main').fullpage({
         // background fixed하는방법
         css3: false,
+        loopHorizontal: false,
         anchors: ['page01', 'page02', 'page03', 'page04', 'page05', 'page06'],
         afterReBuild: function () {
             $('.section').addClass('on');
@@ -26,4 +27,21 @@ $(function () {
     //         console.log(e.originalEvent.wheelDelta)
     //         fullpage_api.moveSlideLeft();
     //     })
+
+
+    // https://github.com/aminta/fullPage.js-2.9.6 에서 마우스 휠로 움직일 때 슬라이드를 제어할 수 있는 옵션이 있다.
+    $('.page03').on('wheel', function (e) {
+        console.log(e.originalEvent.wheelDelta)
+        // if (e.originalEvent.wheelDelta / 120 > 0) {
+        //     $.fn.fullpage.moveSlideLeft();
+        // } else {
+        //     $.fn.fullpage.moveSlideRight();
+        // }
+        if (e.originalEvent.wheelDelta > 0) {
+            $.fn.fullpage.moveSlideLeft();
+        } else {
+            $.fn.fullpage.moveSlideRight();
+        }
+
+    })
 })
