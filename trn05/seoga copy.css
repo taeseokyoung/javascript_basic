@@ -1,0 +1,62 @@
+.Gnb {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+
+/* nav를 게이지로 만들기 */
+.Gnb li {
+    width: 50px;
+}
+
+.Gnb li a {
+    display: block;
+    position: relative;
+    font-size: 0;
+    height: 15px;
+}
+
+.Gnb li a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 1px;
+    background: #333;
+}
+
+.Gnb li.on a::after {
+    width: 100%;
+}
+
+.this_bg {
+    width: 100px;
+    height: 100px;
+    background: #0f0 url(./assets/images/bg.png);
+    transition: 0.5s;
+}
+
+.this_pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.this_pic img {
+    transition: 0.5s;
+    /* 이 img는 transition이 안된다. */
+}
+
+
+.this_tp {
+    width: 100px;
+    height: 100px;
+    background: url(./assets/images/lesedilarona01.jpg) no-repeat center center/cover;
+    transition: 0.5s;
+    /* background img는 transition이 된다. */
+}
