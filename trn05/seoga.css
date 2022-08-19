@@ -1,4 +1,214 @@
-.Gnb {
+/* * {
+    outline: 1px solid #0f0;
+} */
+
+body {
+    letter-spacing: -0.025em;
+}
+
+.container {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.iconHr {
+    position: relative;
+    width: 1600px;
+    margin: 30px auto;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    /* hr태그는 overflow hidden이 기본속성 */
+    overflow: visible;
+}
+
+.iconHr::after {
+    content: "\e905";
+    font-family: xeicon;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    font-size: 20px;
+    background: #f7f7f7;
+    border-radius: 50%;
+}
+
+.Header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 50px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    line-height: 100px;
+    z-index: 999;
+    transition: top 0.5s;
+}
+
+.Header.on {
+    top: -100px;
+}
+
+.Header .Gnb ul {
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+}
+
+.Header h1 {
+    font-size: 0;
+}
+
+.mainVisual {
+    background: url(./assets/images/main.png) no-repeat fixed center center/cover;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+}
+
+.mainVisual strong {
+    display: block;
+    margin: 0 0 30px 0;
+    font-size: 25px;
+    font-weight: 500;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual h2 {
+    display: block;
+    margin: 0 0 30px 0;
+    font-size: 75px;
+    font-weight: 700;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual p {
+    font-size: 15px;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+
+.mainVisual.on strong {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+.mainVisual.on h2 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1s;
+}
+
+.mainVisual.on p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1.5s;
+}
+
+.mainVisual .wheel {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+    font-size: 0;
+}
+
+.mainVisual .wheel::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 10px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.75);
+    animation: wheel 0.5s infinite;
+}
+
+@keyframes wheel {
+    to {
+        top: 20px;
+    }
+}
+
+.productSlider {
+    text-align: center;
+}
+
+.productSlider h2 {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0 0 30px 0;
+}
+
+.productSlider p {
+    margin: 0 0 30px 0;
+}
+
+.productSlider .container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.productSlider .container>div {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+}
+
+.productSlider .container .left {
+    height: 500px;
+    background: #f00;
+}
+
+.productSlider .container .rTop {
+    height: 250px;
+    background: #0f0;
+}
+
+.productSlider .container .rBottom {
+    height: 250px;
+    background: #00f;
+}
+
+.productSlider .basicSlider figure {
+    position: relative;
+    height: 250px;
+}
+
+.productSlider .basicSlider .sl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.productSlider .left_slider figure {
+    height: 500px;
+}
+
+.left .litm01 {
+    background: url(./assets/images/main_story_v0101.png);
+}
+
+.navBar {
     position: fixed;
     top: 50%;
     right: 50px;
@@ -8,18 +218,18 @@
 
 
 /* nav를 게이지로 만들기 */
-.Gnb li {
+.navBar li {
     width: 50px;
 }
 
-.Gnb li a {
+.navBar li a {
     display: block;
     position: relative;
     font-size: 0;
     height: 15px;
 }
 
-.Gnb li a::after {
+.navBar li a::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -30,46 +240,76 @@
     transition: 0.5s;
 }
 
-.Gnb li.on a::after {
+.navBar li.on a::after {
     width: 100%;
 }
 
-.this_page {
+.navBar {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+/* .allOpen {
+    display: none;
+} */
+
+.allOpen {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    font-size: 0;
+    border-radius: 3px;
+}
+
+.allOpen button {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.allOpen::before,
+.allOpen::after {
+    content: "";
     position: absolute;
-    right: 0;
-    top: -100px;
-    text-align: right;
-    white-space: nowrap;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: #fff;
 }
 
-section .txt {
-    text-align: center;
-    font-size: 100px;
-    transform: scale(1);
-    opacity: 0.3;
+.allOpen::before {
+    top: 7px;
 }
 
-section.on .txt {
-    transform: scale(2);
-    opacity: 1;
-    transition: 0.5s;
+.allOpen::after {
+    bottom: 7px;
 }
 
-/* 백그라운드 fixed하는 방법 css js */
-.page03 {
-    background: url(./assets/images/lesedilarona01.jpg) no-repeat fixed center center/cover;
+.allOpen button::before,
+.allOpen button::after {
+    content: "";
+    position: absolute;
+    /* transform 써도되지만 나중에 중복되면 귀찮으니까 높이만큼 빼서 맞춰준다. */
+    top: calc(50% - 1px);
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: #fff;
 }
 
-.page04 {
-    filter: grayscale(1);
-    background: url(./assets/images/lesedilarona02.jpg) no-repeat fixed center center/cover;
+.allOpen.on::before,
+.allOpen.on::after {
+    opacity: 0;
 }
 
-.page05 {
-    background: url(./assets/images/lesedilarona03.jpg) no-repeat fixed center center/cover;
+.allOpen.on button::before {
+    transform: rotate(45deg);
 }
 
-.Footer {
-    background: #333;
-    padding: 100px 0;
+.allOpen.on button::after {
+    transform: rotate(-45deg);
 }
