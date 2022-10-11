@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 조건문 -->
+    <!-- javascript element get value -->
+    <h1><a href="/">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value === 'night'){
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#night_day').value='day';
+    }else{
+         document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#night_day').value='night';
+    }
+    ">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati culpa soluta quod consectetur inventore
+        magnam cumque incidunt architecto eaque eveniet ad laborum alias tempora voluptatum, velit quae similique a quos
+        maiores amet facere error modi atque? Culpa consequuntur harum eum animi. Porro obcaecati odit dicta sint
+        molestiae doloribus ipsum culpa quae! Aspernatur incidunt, possimus ab unde odio minima consequuntur vero aut
+        harum et reiciendis quos enim. Odio sequi recusandae excepturi iste totam animi ut non, autem earum eveniet.
+        Illo repellendus neque, reiciendis numquam, saepe dolorem reprehenderit odio dolorum recusandae, atque eveniet
+        earum. Quidem, nostrum ad! Et tenetur ad quibusdam aperiam.</p>
+
+
+    <!-- this 자신을 가리키는 키워드 -->
+    <!-- 중복을 끝까지 찾아내서 다 없애버리자. (변수 활용)  -->
+
+    <input type="button" value="night" onclick="
+    var target=document.querySelector('body');
+    if(this.value === 'night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value='day';
+    }else{
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value='night';
+    }
+    ">
+    <!-- <input class="day" type="button" value="day"> -->
+    <!-- <script>
+        document.querySelector('#night_day').value
+        if (document.querySelector('#night_day').value === "night") {
+            document.querySelector("body").style.backgroundColor = 'black';
+            document.querySelector("body").style.color = 'white';
+        } else {
+            document.querySelector("body").style.backgroundColor = 'white';
+            document.querySelector("body").style.color = 'black';
+        }
+
+    </script> -->
+</body>
+
+</html>
