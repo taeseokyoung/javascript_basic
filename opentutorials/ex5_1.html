@@ -11,16 +11,21 @@
 <body>
     <h1>Web</h1>
 
-    <input id="night_day" type="button" value="night" onclick="
+    <input type="button" value="night" onclick="
+
+    const body = document.querySelector('body');
+
     if(this.value === 'night'){
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
-        document.querySelector('#night_day').value='day';
+        body.style.backgroundColor='black';
+        body.style.color='white';
+        // document.querySelector('#night_day').value='day';
+        this.value='day';
 
     }else{
-document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
-        document.querySelector('#night_day').value='night';
+        body.style.backgroundColor='white';
+        body.style.color='black';
+        // document.querySelector('#night_day').value='night';
+        this.value='night';
     }">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et voluptatibus accusantium dolor maxime eum
         consectetur excepturi consequuntur. Nihil repudiandae natus sapiente quod, mollitia cum! Amet quaerat alias
