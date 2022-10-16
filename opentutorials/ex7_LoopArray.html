@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop & Array</title>
+</head>
+
+<body>
+    <h1>Web</h1>
+
+    <input type="button" value="night" onclick="
+
+    const body = document.querySelector('body');
+
+    if(this.value === 'night'){
+        body.style.backgroundColor='black';
+        body.style.color='white';
+        // document.querySelector('#night_day').value='day';
+        this.value='day';
+
+    }else{
+        body.style.backgroundColor='white';
+        body.style.color='black';
+        // document.querySelector('#night_day').value='night';
+        this.value='night';
+    }">
+
+    <script>
+        var Coworkers = ['tae', 'hoon', 'young', 'seong', 'ri', 'jun']
+    </script>
+    <h2>Coworkers</h2>
+    <ul>
+        <script>
+            var i = 0;
+            while (i < Coworkers.length) {
+                document.write('<li><a href="http://a.com/' + Coworkers[i] + '">' + Coworkers[i] + '</a></li>')
+                i = i + 1;
+            }
+        </script>
+    </ul>
+
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quibusdam dolorum veritatis quidem odit facere
+        hic. Veritatis quae sequi dolores fugiat vero. Suscipit fuga velit ipsum quo laudantium quasi saepe quae
+        voluptatem dolorum quibusdam nesciunt qui eos corrupti distinctio optio, nulla temporibus debitis deserunt.
+        Corrupti molestias quasi ex totam doloribus nam. Repellat laboriosam cum odio sed assumenda magnam, veniam,
+        tempora ut voluptates voluptas illo. Expedita quia illum eum voluptatum dolore? Quis ab similique nobis
+        laboriosam labore voluptate at ad incidunt odit? Magnam aliquam in sed ad molestias nihil suscipit?
+        Necessitatibus sapiente expedita quo, officia vero excepturi quisquam repellendus ducimus minima.</p>
+</body>
+
+</html>

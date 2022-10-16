@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop & Array</title>
+</head>
+
+<body>
+    <!-- 21.반복문 -->
+    <!-- <h1>Loop</h1>
+    <ul>
+        <script>
+            document.write('<li>1</li>');
+            // 반복문은 이반복이 언제끝날지를 설정!!
+            var i = 0;
+            // 두줄의 코드가 몇번 실행되었는지 적어두는 것은 변수로 =>보통 i라는 변수에 이 일을 잘 시킨다.
+
+            while (i < 3) {
+                document.write('<li>2</li>');
+                document.write('<li>3</li>');
+                i = i + 1
+            }
+            document.write('<li>4</li>');
+        </script>
+    </ul> -->
+    <h1>Loop & Array</h1>
+    <script>
+        var Coworkers = ['tae', 'hoon', 'young', 'seong', 'ri', 'jun']
+    </script>
+    <h2>Coworkers</h2>
+    <ul>
+        <script>
+            var i = 0;
+            while (i < Coworkers.length) {
+                document.write('<li><a href="http://a.com/' + Coworkers[i] + '">' + Coworkers[i] + '</a></li>')
+                i = i + 1;
+            }
+        </script>
+    </ul>
+</body>
+
+</html>
