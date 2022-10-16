@@ -26,7 +26,7 @@
             document.write('<li>4</li>');
         </script>
     </ul> -->
-    <h1>Loop & Array</h1>
+    <h1><a href="">Loop & Array</a></h1>
     <script>
         var Coworkers = ['tae', 'hoon', 'young', 'seong', 'ri', 'jun']
     </script>
@@ -37,6 +37,18 @@
             while (i < Coworkers.length) {
                 document.write('<li><a href="http://a.com/' + Coworkers[i] + '">' + Coworkers[i] + '</a></li>')
                 i = i + 1;
+            }
+
+            document.querySelector('a')
+            // javascript get element by css selector multi
+
+            var alist = document.querySelectorAll('a');
+            // console.log(alist[6]);
+            var i = 0;
+
+            while (alist.length) {
+                console.log(alist[i])
+                i = i + 1
             }
         </script>
     </ul>
